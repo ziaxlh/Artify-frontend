@@ -67,19 +67,19 @@ const RemoveBackground = () => {
       <nav className="navbar2">
         <div className="container-2">
           <div className="logo-artify-1">
-            <img className="logo-artify-1" src="logoArtify.png" alt="Logo Artify" />
+            <img className="logo-artify-2" src="logoArtify.png" alt="Logo Artify" />
           </div>
-          <div className="remover-fondo">
-            <span onClick={() => handleNavigate("/remove-background")}>Remover fondo</span>
+          <div className="remover-fondo1">
+            <span className="span-1" onClick={() => handleNavigate("/remove-background")}>Remover fondo</span>
           </div>
-          <div className="cambiar-formato">
-            <span onClick={() => handleNavigate("#")}>Cambiar formato</span>
+          <div className="cambiar-formato1">
+            <span className="span-1" onClick={() => handleNavigate("#")}>Cambiar formato</span>
           </div>
-          <div className="comprimir">
-            <span onClick={() => handleNavigate("#")}>Comprimir</span>
+          <div className="comprimir1">
+            <span className="span-1" onClick={() => handleNavigate("#")}>Comprimir</span>
           </div>
-          <div className="todas-las-herramientas">
-            <span onClick={() => handleNavigate("#")}>Todas las herramientas</span>
+          <div className="todas-las-herramientas1">
+            <span className="span-1" onClick={() => handleNavigate("#")}>Todas las herramientas</span>
           </div>
         </div>
       </nav>
