@@ -1,0 +1,137 @@
+.compress .ellipse-1 {
+    margin-bottom: 2px;
+    width: 49px;
+    height: 46px;
+  }
+  .compress .comprimir-el-peso-de-una-imagen {
+    margin-bottom: 38px;
+    display: inline-block;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Jost';
+    font-weight: 600;
+    font-size: 62px;
+    color: #000000;
+  }
+  .compress .seleccionar-archivo {
+    overflow-wrap: break-word;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 36px;
+    color: #00387A;
+  }
+  .compress .oarrastra-ysuelta-aqui {
+    margin-right: 2px;
+    overflow-wrap: break-word;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.68);
+  }
+  .compress .comprime-tu-imagen-para-que-sea-mucho-mas-liviana {
+    margin: 0 3px 31px 0;
+    display: inline-block;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 32px;
+    color: #000000;
+  }
+  .compress .logo-artify-1 {
+    background: url('../assets/images/logo_artify_1.png') 50% / cover no-repeat;
+    margin-right: 26px;
+    width: 174px;
+    height: 39px;
+  }
+  .compress {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 18px;
+    width: 1920px;
+    box-sizing: border-box;
+  }
+  .compress .remover-fondo {
+    margin: 0 27.5px 1px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 26px;
+    color: #545454;
+  }
+  .compress .cambiar-formato {
+    margin: 0 24.8px 1px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 26px;
+    color: #545454;
+  }
+  .compress .comprimir {
+    margin: 0 38.3px 1px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 26px;
+    color: #545454;
+  }
+  .compress .todas-las-herramientas {
+    margin: 0 12.3px 1px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 26px;
+    color: #545454;
+  }
+  .compress .polygon-1 {
+    transform: rotate(-178.886deg);
+    margin: 10px 0 10.7px 0;
+    width: 27px;
+    height: 18.3px;
+  }
+  .compress .container {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF;
+    position: relative;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 13px 22px 12px 28px;
+    width: 1920px;
+    box-sizing: border-box;
+  }
+  .compress .container-1 {
+    margin-top: 9px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  .compress .container-2 {
+    border-radius: 13px;
+    background: #9DE2F8;
+    position: relative;
+    margin: 0 0 19px 1px;
+    display: flex;
+    padding: 20px 0 18px 1px;
+    width: 489px;
+    box-sizing: border-box;
+  }
+  .compress .container-3 {
+    border: 1px dashed #00387A;
+    background: #F2F4F6;
+    position: relative;
+    margin: 0 12px 0 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 196px 0 293px 0;
+    width: 1895px;
+    box-sizing: border-box;
+  }
