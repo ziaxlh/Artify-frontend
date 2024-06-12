@@ -6,11 +6,6 @@ const RemoveBackground = () => {
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
   const [isDragOver, setIsDragOver] = useState(false);
-  const [outputImage, setOutputImage] = useState(null)
-
-  const handleNavigate = (path) => {
-    navigate(path);
-  };
 
   const handleDragEnter = (event) => {
     event.preventDefault();
@@ -32,8 +27,6 @@ const RemoveBackground = () => {
     setIsDragOver(false);
     const file = event.dataTransfer.files[0];
     setSelectedFile(file);
-    // Lógica adicional para manejar el archivo subido
-    console.log("Fondo removido")
   };
 
   const handleFileChange = (event) => {
@@ -55,33 +48,35 @@ const RemoveBackground = () => {
       });
 
       const outputUrl = URL.createObjectURL(response.data);
-      setOutputImage(outputUrl);
+      console.log("Generated Image URL:", outputUrl); // Verificar la URL generada
+      navigate('/remove-result', { state: { imageUrl: outputUrl } });
     } catch (error) {
       console.error("Error al remover el fondo:", error);
     }
   };
 
-
   return (
     <div className="remove-background">
       <nav className="navbar2">
-        <div className="container-2">
-          <div className="logo-artify-1">
-            <img className="logo-artify-2" src="logoArtify.png" alt="Logo Artify" />
+        <div className="container-2-2">
+          <div className="logo-artify-2">
+            <img className="logo-artify-2" src="logoArtify.png" alt="Logo Artify" onClick={() => navigate('/')} />
           </div>
           <div className="remover-fondo1">
-            <span className="span-1" onClick={() => handleNavigate("/remove-background")}>Remover fondo</span>
+            <span className="span-1" onClick={() => navigate('/remove-background')}>Remover fondo</span>
           </div>
           <div className="cambiar-formato1">
-            <span className="span-1" onClick={() => handleNavigate("#")}>Cambiar formato</span>
+            <span className="span-1" onClick={() => navigate('/change-format')}>Cambiar formato</span>
           </div>
           <div className="comprimir1">
-            <span className="span-1" onClick={() => handleNavigate("#")}>Comprimir</span>
+            <span className="span-1" onClick={() => navigate('/compress')}>Comprimir</span>
           </div>
           <div className="todas-las-herramientas1">
-            <span className="span-1" onClick={() => handleNavigate("#")}>Todas las herramientas</span>
+            <span className="span-1" onClick={() => navigate('/tools')}>Todas las herramientas</span>
           </div>
+          <img className="polygon-1" src="polygon_11_x2m.png" />
         </div>
+        <img className="ellipse-1" src="ellipse_11_x2.png" />
       </nav>
       <div 
         className={`container-3-1 ${isDragOver ? 'drag-over' : ''}`}
@@ -113,11 +108,6 @@ const RemoveBackground = () => {
         </span>
         <button onClick={handleRemoveBackground} className='remove-bg-button'>Remover fondo
         </button>
-        {outputImage &&(
-          <div className='output-image'>
-            <img src={outputImage} alt='Output'/>
-          </div>
-        )}
       </div>
     </div>
   );

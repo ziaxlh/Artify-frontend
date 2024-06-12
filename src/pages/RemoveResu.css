@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Estilos para el contenedor principal */
+.remove-background-result {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para la barra de navegación */
+.remove-background-result .navbar5 {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 22px 3px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilos para los elementos de la barra de navegación */
+.remove-background-result .container-2-5 {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+/* Estilos para el logo */
+.remove-background-result .logo-artify-5 {
+  margin-right: 23px;
+  margin-left: 5px;
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Estilos para los elementos con enlace en la barra de navegación */
+.remove-background-result .span-5 {
+  color: #545454;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.remove-background-result .span-5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #54545473;
+  bottom: -5px;
+  border-radius: 5px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.remove-background-result .span-5:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Estilos para los elementos de la barra de navegación específicos */
+.remove-background-result .remover-fondo5,
+.remove-background-result .cambiar-formato5,
+.remove-background-result .comprimir5 {
+  margin: 0 27.5px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+.remove-background-result .todas-las-herramientas5 {
+  margin: 0 10px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+/* Estilos para la flecha y el círculo en la barra de navegación */
+.remove-background-result .polygon-5 {
+  transform: rotate(-178.886deg);
+  margin: 10px 0 10.7px 0;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.remove-background-result .ellipse-5 {
+  margin-bottom: 2px;
+  width: 43px;
+  height: 40px;
+  cursor: pointer;
+}
+/*  */
+
+/* Estilos para el contenedor principal de la imagen */
+.remove-background-result .rectangle-9-5 {
+  border-radius: 29px;
+  border: 1px solid #00387A;
+  margin: 2.6px 36.4px 0 0;
+  width: 1060px;
+  height: 566px;
+}
+
+/* Estilos para el menú de opciones */
+.remove-background-result .menu {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  padding: 63.6px 50px 51px 46.6px;
+  box-sizing: border-box;
+  width: 561.73px; 
+  height: 536px;
+  margin-top: 15px;
+  
+}
+
+/* Estilos para el contenedor de cada opción del menú */
+.remove-background-result .containermasm {
+  margin-bottom: 23px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+/* Estilos para + y - */
+.remove-background-result .mas {
+  margin: 0px 15px 0px 0;
+  width: 30px;
+  height: 31px;
+  cursor: pointer; 
+  border-radius: 10px;
+}
+
+.remove-background-result .menos {
+  margin: 0px 0px 0px 15px;
+  width: 30px;
+  height: 31px;
+  cursor: pointer; 
+  border-radius: 10px;
+}
+
+.remove-background-result .containerwao {
+  margin-bottom: 23px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para el contenedor de la opción de descarga */
+.remove-background-result .container-1-5 {
+  border-radius: 13px;
+  background: #9DE2F8;
+  position: relative;
+  margin: 0 0.1px 9px 3px;
+  display: flex;
+  align-self: center;
+  padding: 8px 0 14px 0;
+  width: 353px;
+  box-sizing: border-box;
+  cursor: pointer; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  user-select: none;
+}
+
+.remove-background-result .container-1-5:hover {
+  background-color: #7acbf5; 
+  box-shadow: 0 0 10px #7acbf5; 
+}
+
+/* Estilos para el contenedor de las opciones del menú */
+.remove-background-result .container-2-5-5 {
+  margin-bottom: 55px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para el contenedor general de opciones del menú */
+.remove-background-result .container-3-5 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de la opción "Añadir fondo" */
+.remove-background-result .container-4-5 {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para el contenedor de la opción "Añadir filtro" */
+.remove-background-result .container-5-5 {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.remove-background-result .container-5-5:hover,
+.remove-background-result .container-4-5:hover,
+.container-2-5-5:hover, .containerwao:hover{
+  transform: scale(1.1);
+}
+
+/* Estilos para el contenedor general que agrupa las opciones del menú y la imagen */
+.remove-background-result .container-6-5 {
+  margin: 80px 130.9px 19.9px 131px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenedor adicional de opciones del menú */
+.remove-background-result .container-7-5 {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de imágenes */
+.remove-background-result .imagenesop {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background: #FFFFFF;
+  position: relative;
+  margin-right: 575.9px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 14px;
+  padding: 20.1px 38px 19.7px 37.9px;
+  width: 585.9px;
+  box-sizing: border-box;
+}
+
+/* Estilos para los íconos del menú */
+.remove-background-result .recorte-icono-1,
+.remove-background-result .recorte-icono-3,
+.remove-background-result .recorte-icono-4 {
+  margin: 5px 30px 2px 0;
+  width: 30px;
+  height: 31px;
+  cursor: pointer; 
+}
+
+.remove-background-result .recorte-icono-2 {
+  margin: 5px 30px 2px 0;
+  width: 30px;
+  height: 31px;
+  cursor: pointer; 
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+/* Estilos para los textos del menú */
+.remove-background-result .recortar,
+.remove-background-result .aadir-fondo,
+.remove-background-result .abrir-en-canva,
+.remove-background-result .aadir-filtro {
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 26px;
+  cursor: pointer; 
+  color: #545454;
+}
+
+/* Estilos para el texto de descarga */
+.remove-background-result .descargar-5 {
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  margin-left: 123px;
+  font-size: 26px;
+  color: #00387A;
+  text-align: center; 
+}
+
+/* Estilos para las imágenes */
+.remove-background-result .image-1,
+.remove-background-result .image-2,
+.remove-background-result .image-3,
+.remove-background-result .image-4 {
+  border-radius: 11px;
+  width: 117px;
+  cursor: pointer; 
+  height: 78px;
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.remove-background-result .image-1:hover,
+.remove-background-result .image-2:hover,
+.remove-background-result .image-3:hover,
+.remove-background-result .image-4:hover {
+  transform: scale(1.1); /* Aumenta el tamaño a 110% al pasar el puntero */
+}
+
+
+/* Estilos para el tamaño de la imagen */
+.remove-background-result .px {
+  margin-left: 10px;
+  align-self: center;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 15px;
+  color: #545454;
+}
+
+
+/* Estilos para el borde de la imagen */
+.remove-background-result .elipse-recorte {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 24.1%;
+  top: 17%;
+  border-radius: 100%;
+  width: 66px;
+  height: 66px;
+}

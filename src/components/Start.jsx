@@ -4,8 +4,24 @@ import { useNavigate } from 'react-router-dom';
 const Start = () => {
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
+  const handleRemove = () => {
     navigate('/remove-background');
+  };
+
+  const handleChange = () => {
+    navigate('/change-format');
+  };
+
+  const handleCompress = () => {
+    navigate('/compress');
+  };
+
+  const handleTools = () => {
+    navigate('/remove-background');
+  };
+
+  const handleStart = () => {
+    navigate('/');
   };
 
   return (
@@ -13,21 +29,23 @@ const Start = () => {
       <nav className="navbar">
           <div className="container-2">
             <div className="logo-artify-1">
-              <img className="logo-artify-1" src="logoArtify.png" alt="Logo Artify" />
+            <img className="logo-artify-1" src="logoArtify.png" alt="Logo Artify" onClick={handleStart} />
             </div>
             <div className="remover-fondo">
-              <span onClick={() => handleNavigate("/remove-background")}>Remover fondo</span>
+              <span onClick={() => handleRemove("/remove-background")}>Remover fondo</span>
             </div>
             <div className="cambiar-formato">
-              <span onClick={() => handleNavigate("#")}>Cambiar formato</span>
+              <span onClick={() => handleChange("/change-format")}>Cambiar formato</span>
             </div>
             <div className="comprimir">
-              <span onClick={() => handleNavigate("#")}>Comprimir</span>
+              <span onClick={() => handleCompress("/compress")}>Comprimir</span>
             </div>
             <div className="todas-las-herramientas">
-              <span onClick={() => handleNavigate("#")}>Todas las herramientas</span>
-            </div>
+              <span onClick={() => handleTools("#")}>Todas las herramientas</span>
+              </div>
+            <img className="polygon" src="polygon_11_x2m.png" />
           </div>
+          <img className="ellipse" src="ellipse_11_x2.png" />
         </nav>
       <div className="start">
         <div className="container">
@@ -43,10 +61,14 @@ const Start = () => {
                 ¡Explora tu creatividad sin límites con Artify!
               </div>
             </div>
+            
             <div className="container-6">
-              <span className="empieza-ahora">
-                Empieza ahora
-              </span>
+              <img className="figuras" src="Figuras.png"/>
+                <div className="container-7">
+                  <span className="empieza-ahora">
+                    Empieza ahora
+                  </span>
+                </div>
             </div>   
           </div>
         </div>

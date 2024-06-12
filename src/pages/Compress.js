@@ -1,15 +1,14 @@
 import React from 'react';
-import Compress from '../components/Compress';
-import './Compress.css'; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CompressComponent from '../components/Compress'; 
+import './Compress.css';
 
-
-
-const Compress = () => {
+const CompressPage = () => { 
   return (
     <div>
-        <Compress />
+      <CompressComponent /> { }
     </div>
   );
 }
 
-export default Compress;
+export default CompressPage;

@@ -1,0 +1,73 @@
+/* Contenedor del control deslizante */
+.zoom-slider {
+    width: 380px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo del control deslizante */
+.zoom-slider input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 380px;
+    height: 3px; /* Altura más delgada */
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.zoom-slider input[type="range"]:hover {
+    opacity: 1;
+}
+
+/* Pista del control deslizante */
+.zoom-slider input[type="range"]::-webkit-slider-runnable-track {
+    width: 380px;
+    height: 3px; /* Altura más delgada */
+    cursor: pointer;
+    background: #9DE2F8;
+    border-radius: 5px;
+    border: 1px solid #9DE2F8;
+}
+
+.zoom-slider input[type="range"]::-moz-range-track {
+    width: 380px;
+    height: 4px; /* Altura más delgada */
+    cursor: pointer;
+    background: #9DE2F8;
+    border-radius: 5px;
+    border: 1px solid #9DE2F8;
+}
+
+/* Pista activa del control deslizante */
+.zoom-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #9DE2F8;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -9px; /* Ajusta la posición del pulgar para la pista más delgada */
+}
+
+.zoom-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #9DE2F8;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Focus styles */
+.zoom-slider input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #7acbf5; 
+}
+
+.zoom-slider input[type="range"]:focus::-moz-range-track {
+    background: #7acbf5; 
+}

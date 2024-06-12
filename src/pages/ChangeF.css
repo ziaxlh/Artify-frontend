@@ -1,137 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos para el contenedor principal */
 .change-format {
-    background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 18px;
-    width: 1920px;
-    box-sizing: border-box;
-  }
-  .change-format .remover-fondo {
-    margin: 0 27.5px 1px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Jost';
-    font-weight: 400;
-    font-size: 26px;
-    color: #545454;
-  }
-  .change-format .cambiar-formato {
-    margin: 0 24.8px 1px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Jost';
-    font-weight: 400;
-    font-size: 26px;
-    color: #545454;
-  }
-  .change-format .comprimir {
-    margin: 0 38.3px 1px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Jost';
-    font-weight: 400;
-    font-size: 26px;
-    color: #545454;
-  }
-  .change-format .todas-las-herramientas {
-    margin: 0 12.3px 1px 0;
-    display: inline-block;
-    overflow-wrap: break-word;
-    font-family: 'Jost';
-    font-weight: 400;
-    font-size: 26px;
-    color: #545454;
-  }
-  .change-format .polygon-1 {
-    transform: rotate(-178.886deg);
-    margin: 10px 0 10.7px 0;
-    width: 27px;
-    height: 18.3px;
-  }
-  .change-format .ellipse-1 {
-    margin-bottom: 2px;
-    width: 49px;
-    height: 46px;
-  }
-  .change-format .cambiar-formato-de-una-imagen {
-    margin-bottom: 38px;
-    display: inline-block;
-    text-align: center;
-    overflow-wrap: break-word;
-    font-family: 'Jost';
-    font-weight: 600;
-    font-size: 62px;
-    color: #000000;
-  }
-  .change-format .seleccionar-archivo {
-    overflow-wrap: break-word;
-    font-family: 'Jost';
-    font-weight: 400;
-    font-size: 36px;
-    color: #00387A;
-  }
-  .change-format .oarrastra-ysuelta-aqui {
-    margin-right: 2px;
-    overflow-wrap: break-word;
-    font-family: 'Jost';
-    font-weight: 400;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 0.68);
-  }
-  .change-format .cambia-el-formato-de-tu-imagen-apng-jpg-ogif-segun-lo-que-necesites {
-    margin: 0 3px 31px 0;
-    display: inline-block;
-    text-align: center;
-    overflow-wrap: break-word;
-    font-family: 'Jost';
-    font-weight: 400;
-    font-size: 32px;
-    color: #000000;
-  }
-  .change-format .logo-artify-1 {
-    background: url('../assets/images/logo_artify_1.png') 50% / cover no-repeat;
-    margin-right: 26px;
-    width: 174px;
-    height: 39px;
-  }
-  .change-format .container {
-    border-radius: 13px;
-    background: #9DE2F8;
-    position: relative;
-    margin: 0 0 19px 1px;
-    display: flex;
-    padding: 20px 0 18px 1px;
-    width: 489px;
-    box-sizing: border-box;
-  }
-  .change-format .container-1 {
-    margin-top: 9px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-  }
-  .change-format .container-2 {
-    border: 1px dashed #00387A;
-    background: #F2F4F6;
-    position: relative;
-    margin: 0 12px 0 13px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 196px 0 293px 0;
-    width: 1895px;
-    box-sizing: border-box;
-  }
-  .change-format .container-3 {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background: #FFFFFF;
-    position: relative;
-    margin-bottom: 18px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 13px 22px 12px 28px;
-    width: 1920px;
-    box-sizing: border-box;
-  }
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para la barra de navegación */
+.change-format .navbar3 {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 22px 3px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+ 
+/* Estilos para los elementos de la barra de navegación */
+.change-format .container-2-3 {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+/* Estilos para el logo */
+.change-format .logo-artify-3 {
+  margin-right: 23px;
+  margin-left: 5px;
+  width: 130px;
+  height: 40x;
+  cursor: pointer;
+}
+
+/* Estilos para los elementos con enlace en la barra de navegación */
+.change-format .span-2 {
+  color: #545454;
+  text-decoration: none;
+  position: relative; 
+  cursor: pointer;
+}
+
+.change-format .span-2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #54545473;
+  bottom: -5px;
+  border-radius: 5px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: .3s ease; 
+}
+
+.change-format .span-2:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Estilos para los elementos de la barra de navegación específicos */
+.change-format .remover-fondo2,
+.change-format .cambiar-formato2,
+.change-format .comprimir2 {
+  margin: 0 27.5px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+.change-format .todas-las-herramientas2 {
+  margin: 0 10px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+.change-format .polygon-2 {
+  transform: rotate(-178.886deg);
+  margin: 10px 0 10.7px 0;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.change-format .ellipse-2 {
+  margin-bottom: 2px;
+  width: 43px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Estilos para el texto "cambiar formato de una imagen" */
+.change-format .cambiar-formato-de-una-imagen{
+  margin-bottom: 38px;
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 600;
+  font-size: 62px;
+  color: #2c2c2c;
+}
+
+/* Estilos para el texto "cambia formato..." */
+.change-format .cambia-formato {
+  margin: 0 3px 31px 0;
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 26px;
+  color: #2c2c2c;
+}
+
+/* Estilos para el contenido principal */
+.change-format .container-3-2 {
+  border: 2px dashed #1b72d68f;
+  background-color: #F2F4F6;
+  padding: 20px;
+  transition: background-color 0.3s, border-color 0.3s; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 196px 0 209px 0;
+  width: 98.7%;
+  box-sizing: border-box;
+}
+
+.change-format .container-3-2.drag-over {
+  border-color: #1b72d6c4;
+  background-color: #cce1f7;
+}
+
+/* Estilos para el contenedor */
+.change-format .container {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de botón de seleccionar archivo */
+.change-format .container-1-3 {
+  border-radius: 13px;
+  background: #9DE2F8;
+  top: 7px;
+  right: 35px;
+  display: flex;
+  padding: 20px 0 18px 1px;
+  width: 410px;
+  box-sizing: border-box;
+  cursor: pointer; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  user-select: none;
+}
+
+.change-format .container-1-3:hover {
+  background-color: #7acbf5; 
+  box-shadow: 0 0 10px #7acbf5; 
+}
+
+/* Estilos para el texto "Seleccionar archivo" */
+.change-format .seleccionar-archivo1 {
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  margin-left: 100px;
+  font-size: 26px;
+  color: #00387A;
+  text-align: center; 
+}
+
+/* Estilos para el texto "O arrastra y suelta aquí" */
+.change-format .oarrastra-ysuelta-aqui1 {
+  margin-right: 2px;
+  margin-top: 15px;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.68);
+}

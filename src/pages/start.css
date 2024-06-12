@@ -1,43 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Estilos para el contenedor principal */
 .home {
-    background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 300px;
-    box-sizing: border-box;
-} 
-
-/* Estilos para los enlaces en la navbar */
-.navbar span {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    position: relative; 
-    cursor: pointer;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+  box-sizing: border-box;
 }
 
-.navbar span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #54545473;
-    bottom: -5px;
-    border-radius: 5px;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: .3s ease; 
+/* Estilos para la barra de navegación */
+.home .navbar {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 199px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 22px 3px 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.navbar span:hover::after {
-    transform: translateY(0);
-    opacity: 1;
+/* Estilos para el contenedor de botones */
+.home .container-2 {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
 }
 
-/* Estilos específicos para cada clase */
-.home .remover-fondo, .home .cambiar-formato, .home .comprimir, .home .todas-las-herramientas {
+/* Estilos para el logo */
+.home .logo-artify-1 {
+  margin-right: 23px;
+  margin-left: 5px;
+  width: 130px;
+  height: 40x;
+  cursor: pointer;
+}
+
+/* Estilos para los enlaces en la barra de navegación */
+.home .navbar span {
+  color: #545454;
+  text-decoration: none;
+  position: relative; 
+  cursor: pointer;
+}
+
+.home .navbar span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #54545473;
+  bottom: -5px;
+  border-radius: 5px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: .3s ease; 
+}
+
+.home .navbar span:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Estilos específicos para cada clase en la barra de navegación */
+.home .remover-fondo,
+.home .cambiar-formato,
+.home .comprimir {
   margin: 0 27.5px 1px 0;
   display: inline-block;
   overflow-wrap: break-word;
@@ -47,6 +81,63 @@
   color: #545454;
 }
 
+.home .todas-las-herramientas {
+  margin: 0 10px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+.home .polygon {
+  transform: rotate(-178.886deg);
+  margin: 10px 0 10.7px 0;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.home .ellipse {
+  margin-bottom: 2px;
+  width: 43px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Estilos para el contenido principal */
+.home .start {
+  position: relative;
+  margin: 0 171px;
+  display: flex;
+  padding-right: 32px;
+  width: 1578px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de texto principal */
+.home .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1546px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de texto secundario */
+.home .container-1 {
+  margin: 0 3px 13px 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  width: 1000px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el texto principal */
 .home .da-vida-atu-creatividad-con-artify {
   margin-right: 90px;
   width: 985px;
@@ -58,17 +149,8 @@
   text-align: left; 
 }
 
-.home .empieza-ahora {
-  overflow-wrap: break-word;
-  font-family: 'Jost';
-  font-weight: 400;
-  margin-left: 115px;
-  font-size: 26px;
-  color: #00387A;
-  text-align: center; 
-}
-
-.home .txt-1{
+/* Estilos para el texto secundario */
+.home .txt-1 {
   margin: 0 138px 2.8px 0;
   display: inline-block;
   width: 919px;
@@ -80,79 +162,47 @@
   text-align: left; 
 }
 
-.home .logo-artify-1 {
-  margin-right: 23px;
-  margin-left: 5px;
-  width: 130px;
-  height: 40x;
+/* Estilos para el botón "Empieza ahora" */
+.home .empieza-ahora {
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  margin-left: 115px;
+  font-size: 26px;
+  color: #00387A;
+  text-align: center; 
 }
 
-.home .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 1546px;
-  height: fit-content;
-  box-sizing: border-box;
-}
-
-.home .container-1 {
-  margin: 0 3px 13px 3px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-self: flex-start;
-  width: 1150px;
-  box-sizing: border-box;
-}
-
-.home .container-2 {
-  margin-top: 7px;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-}
-
-.home .navbar {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background: #FFFFFF;
-  position: relative;
-  margin-bottom: 199px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 22px 3px 40px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.home .start {
-  position: relative;
-  margin: 0 171px;
-  display: flex;
-  padding-right: 32px;
-  width: 1578px;
-  box-sizing: border-box;
-}
-
-.home .container-3 {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 1546px;
-  height: fit-content;
-  box-sizing: border-box;
+.home .figuras{
+  overflow-wrap: break-word;
+  font-weight: 400;
+  margin-top: 27px;
+  width: 900px;
+  height: 350px;
 }
 
 .home .container-4 {
-  position: relative;
+  /* position: relative; */
   display: flex;
   width: 1546px;
   box-sizing: border-box;
 }
 
+/* Estilos para el contenedor de cada botón */
 .home .container-6 {
+  border-radius: 13px;
+  position: absolute;
+  top: 7px;
+  right: 35px;
+  display: flex;
+  padding: 20px 0 18px 1px;
+  width: 410px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  user-select: none; 
+}
+
+.home .container-7 {
   border-radius: 13px;
   background: #9DE2F8;
   position: absolute;
@@ -162,12 +212,13 @@
   padding: 20px 0 18px 1px;
   width: 410px;
   box-sizing: border-box;
-  cursor: pointer; /* Cambia el cursor al pasar sobre el contenedor */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-  user-select: none; /* Evita que el contenido del contenedor sea seleccionable */
+  cursor: pointer; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  user-select: none; 
+  margin-top: 165px;
 }
 
-.home .container-6:hover {
-  background-color: #7acbf5; /* Cambia el color de fondo al pasar sobre el contenedor */
-  box-shadow: 0 0 10px #7acbf5/* Aumenta la intensidad de la sombra */
+.home .container-7:hover {
+  background-color: #7acbf5; 
+  box-shadow: 0 0 10px #7acbf5;
 }

@@ -1,22 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Estilos para el contenedor principal */
 .remove-background {
   background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 300px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
-.navbar span {
-  color: rgb(0, 0, 0);
+/* Estilos para la barra de navegación */
+.remove-background .navbar2 {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 22px 3px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilos para los elementos de la barra de navegación */
+.remove-background .container-2-2 {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+/* Estilos para el logo */
+.remove-background .logo-artify-2 {
+  margin-right: 23px;
+  margin-left: 5px;
+  width: 130px;
+  height: 40x;
+  cursor: pointer;
+}
+
+/* Estilos para los elementos con enlace en la barra de navegación */
+.remove-background .span-1 {
+  color: #545454;
   text-decoration: none;
   position: relative; 
   cursor: pointer;
 }
 
-.navbar span::after {
+.remove-background .span-1::after {
   content: "";
   position: absolute;
   left: 0;
@@ -30,11 +63,121 @@
   transition: .3s ease; 
 }
 
-.navbar span:hover::after {
+.remove-background .span-1:hover::after {
   transform: translateY(0);
   opacity: 1;
 }
 
+/* Estilos para los elementos de la barra de navegación específicos */
+.remove-background .remover-fondo1,
+.remove-background .cambiar-formato1,
+.remove-background .comprimir1 {
+  margin: 0 27.5px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+.remove-background .todas-las-herramientas1 {
+  margin: 0 10px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+.remove-background .polygon-1 {
+  transform: rotate(-178.886deg);
+  margin: 10px 0 10.7px 0;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.remove-background .ellipse-1 {
+  margin-bottom: 2px;
+  width: 43px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Estilos para el texto "Remover fondo de una imagen" */
+.remove-background .remover-fondo-de-una-imagen {
+  margin-bottom: 38px;
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 600;
+  font-size: 62px;
+  color: #2c2c2c;
+}
+
+/* Estilos para el texto "Remueve y modifica el fondo..." */
+.remove-background .remueve-fondo {
+  margin: 0 3px 31px 0;
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 26px;
+  color: #2c2c2c;
+}
+
+/* Estilos para el contenido principal */
+.remove-background .container-3-1 {
+  border: 2px dashed #1b72d68f;
+  background-color: #F2F4F6;
+  padding: 20px;
+  transition: background-color 0.3s, border-color 0.3s; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 196px 0 209px 0;
+  width: 98.7%;
+  box-sizing: border-box;
+}
+
+.remove-background .container-3-1.drag-over {
+  border-color: #1b72d6c4;
+  background-color: #cce1f7;
+}
+
+/* Estilos para el contenedor */
+.remove-background .container {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de botón de seleccionar archivo */
+.remove-background .container-1-2 {
+  border-radius: 13px;
+  background: #9DE2F8;
+  top: 7px;
+  right: 35px;
+  display: flex;
+  padding: 20px 0 18px 1px;
+  width: 410px;
+  box-sizing: border-box;
+  cursor: pointer; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  user-select: none;
+}
+
+.remove-background .container-1-2:hover {
+  background-color: #7acbf5; 
+  box-shadow: 0 0 10px #7acbf5; 
+}
+
+/* Estilos para el texto "Seleccionar archivo" */
 .remove-background .seleccionar-archivo {
   overflow-wrap: break-word;
   font-family: 'Jost';
@@ -45,6 +188,7 @@
   text-align: center; 
 }
 
+/* Estilos para el texto "O arrastra y suelta aquí" */
 .remove-background .oarrastra-ysuelta-aqui {
   margin-right: 2px;
   margin-top: 15px;
@@ -54,109 +198,3 @@
   font-size: 22px;
   color: rgba(0, 0, 0, 0.68);
 }
-
-.remove-background .remueve-fondo {
-  margin: 0 3px 31px 0;
-  display: inline-block;
-  text-align: center;
-  overflow-wrap: break-word;
-  font-family: 'Jost';
-  font-weight: 400;
-  font-size: 26px;
-  color: #000000;
-}
-
-.remove-background .remover-fondo,
-.remove-background .cambiar-formato,
-.remove-background .comprimir,
-.remove-background .todas-las-herramientas {
-  margin: 0 27.5px 1px 0;
-  display: inline-block;
-  overflow-wrap: break-word;
-  font-family: 'Jost';
-  font-weight: 400;
-  font-size: 20px;
-  color: #545454;
-}
-
-.remove-background .navbar2 {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background: #FFFFFF;
-  position: relative;
-  margin-bottom: 199px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 22px 3px 40px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.remove-background .logo-artify-1 {
-  margin-right: 23px;
-  margin-left: 5px;
-  width: 130px;
-  height: 40x;
-}
-
-.remove-background .remover-fondo-de-una-imagen {
-  margin-bottom: 38px;
-  display: inline-block;
-  text-align: center;
-  overflow-wrap: break-word;
-  font-family: 'Jost';
-  font-weight: 600;
-  font-size: 62px;
-  color: #000000;
-}
-
-.remove-background .container {
-  margin-top: 9px;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-}
-
-.remove-background .container-1-2 {
-  border-radius: 13px;
-  background: #9DE2F8;
-  top: 7px;
-  right: 35px;
-  display: flex;
-  padding: 20px 0 18px 1px;
-  width: 410px;
-  box-sizing: border-box;
-  cursor: pointer; /* Cambia el cursor al pasar sobre el contenedor */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-  user-select: none;
-}
-
-.home .container-1-2:hover {
-  background-color: #7acbf5; /* Cambia el color de fondo al pasar sobre el contenedor */
-  box-shadow: 0 0 10px #7acbf5/* Aumenta la intensidad de la sombra */
-}
-
-.remove-background .container-2 {
-  margin-top: 7px;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-}
-
-.container-3-1 {
-  border: 2px dashed #ccc;
-  padding: 20px;
-  transition: background-color 0.3s, border-color 0.3s; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 196px 0 280px 0;
-  width: 99.1%;
-  box-sizing: border-box;
-}
-
-.container-3-1.drag-over {
-  border-color: #000;
-  background-color: #f0f0f0;
-}
-
