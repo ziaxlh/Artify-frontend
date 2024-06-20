@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+.compress-result {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para la barra de navegación */
+.compress-result .navbar7 {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 22px 3px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilos para los elementos de la barra de navegación */
+.compress-result .container-2-7 {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+/* Estilos para el logo */
+.compress-result .logo-artify-7 {
+  margin-right: 23px;
+  margin-left: 5px;
+  width: 130px;
+  height: 40x;
+  cursor: pointer;
+}
+
+/* Estilos para los elementos con enlace en la barra de navegación */
+.change-format-result .span-7 {
+  color: #545454;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.change-format-result .span-7::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #54545473;
+  bottom: -5px;
+  border-radius: 5px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.compress-result .span-7:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Estilos para los elementos de la barra de navegación específicos */
+.compress-result .remover-fondo7,
+.compress-result .cambiar-formato7,
+.compress-result .comprimir7 {
+  margin: 0 27.5px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+.compress-result .todas-las-herramientas7 {
+  margin: 0 10px 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 20px;
+  color: #545454;
+}
+
+/* Estilos para la flecha y el círculo en la barra de navegación */
+.compress-result .polygon-7 {
+  transform: rotate(-178.886deg);
+  margin: 10px 0 10.7px 0;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.compress-result .ellipse-7 {
+  margin-bottom: 2px;
+  width: 43px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.compress-result .container-Descargar1 {
+  border-radius: 13px;
+  background: #9de2f8;
+  position: relative;
+  margin: 0 0.1px 9px 0px;
+  display: flex;
+  align-self: center;
+  padding: 8px 0 14px 0;
+  width: 353px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.compress-result .container-Descargar1:hover {
+  background-color: #7acbf5;
+  box-shadow: 0 0 10px #7acbf5;
+}
+
+.compress-result .Descargar-7 {
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 400;
+  margin-left: 123px;
+  font-size: 26px;
+  color: #00387a;
+  text-align: center;
+}
+.compress-result .la-imagen-se-acomprimido-con-exito {
+  margin-bottom: 50px;
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 600;
+  font-size: 55px;
+  color: #2c2c2c;
+}
+
+.compress-result .kb {
+  margin-right: 1px;
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 15px;
+  color: #545454;
+}
+
+.compress-result .fin {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background: #ffffff;
+  position: relative;
+  margin-right: 0.8px;
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 112px 0 112.4px 0;
+  width: 1057.2px;
+  box-sizing: border-box;
+}
+
+.compress-result .container {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.compress-result .container-1 {
+  border-radius: 13px;
+  background: #9de2f8;
+  position: relative;
+  margin-bottom: 19px;
+  display: flex;
+  padding: 7px 2.9px 10px 0;
+  width: 334px;
+  box-sizing: border-box;
+}

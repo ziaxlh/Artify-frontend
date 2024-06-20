@@ -139,7 +139,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 196px 0 209px 0;
+  padding: 196px 0 229px 0;
   width: 98.7%;
   box-sizing: border-box;
 }
@@ -186,6 +186,7 @@
   font-size: 26px;
   color: #00387A;
   text-align: center; 
+  cursor: pointer; 
 }
 
 /* Estilos para el texto "O arrastra y suelta aquí" */
