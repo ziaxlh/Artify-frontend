@@ -6,6 +6,7 @@ const CompressResult = () => {
   const { compressedFilePath } = location.state || {};
   const [imageSize, setImageSize] = useState(null);
   const navigate = useNavigate(); // Asegúrate de que useNavigate esté importado correctamente
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleRemove = () => {
     navigate("/remove-background");
@@ -28,13 +29,12 @@ const CompressResult = () => {
   };
 
   useEffect(() => {
-    // Función para obtener el tamaño de la imagen
     const fetchImageSize = async () => {
       if (compressedFilePath) {
         try {
           const response = await fetch(`http://localhost:8000/${compressedFilePath}`);
           const blob = await response.blob();
-          setImageSize((blob.size / 1024).toFixed(2)); // Convertir a KB y establecer el tamaño
+          setImageSize((blob.size / 1024).toFixed(2)); 
         } catch (error) {
           console.error("Error al obtener el tamaño de la imagen comprimida:", error);
         }
@@ -44,16 +44,30 @@ const CompressResult = () => {
     fetchImageSize();
   }, [compressedFilePath]);
 
-  const handleDownload = (event) => {
-    event.preventDefault(); // Evitar el comportamiento predeterminado del navegador
+  const handleDownload = async () => {
     if (compressedFilePath) {
-      const link = document.createElement("a");
-      link.href = `http://localhost:8000/${compressedFilePath}`;
-      link.download = compressedFilePath.split('/').pop(); // Establecer el atributo de descarga con el nombre del archivo
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      try {
+        const response = await fetch(`http://localhost:8000/download/?file_path=${encodeURIComponent(compressedFilePath)}`);
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', compressedFilePath.split('/').pop());
+        document.body.appendChild(link);
+        link.click();
+        link.parentNode.removeChild(link);
+      } catch (error) {
+        console.error('Error downloading file:', error);
+      }
     }
+  };
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  const closeDropdown = () => {
+    setDropdownVisible(false);
   };
 
   return (
@@ -76,8 +90,19 @@ const CompressResult = () => {
           <div className="comprimir7" onClick={handleCompress}>
             <span className="span-7">Comprimir</span>
           </div>
-          <div className="todas-las-herramientas7" onClick={handleTools}>
-            <span className="span-7">Todas las herramientas</span>
+          <div 
+            className="todas-las-herramientas7" 
+            onMouseEnter={toggleDropdown} 
+            onMouseLeave={closeDropdown}
+          >
+            <span>Todas las herramientas</span>
+            {dropdownVisible && (
+              <div className="dropdown-menu">
+                <span onClick={handleRemove}>Remover fondo</span>
+                <span onClick={handleChange}>Cambiar formato</span>
+                <span onClick={handleCompress}>Comprimir</span>
+              </div>
+            )}
           </div>
           <img className="polygon-7" src="polygon_11_x2m.png" alt="Polygon" />
         </div>

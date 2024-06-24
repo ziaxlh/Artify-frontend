@@ -41,14 +41,14 @@
 }
 
 /* Estilos para los elementos con enlace en la barra de navegación */
-.change-format-result .span-7 {
+.compress-result .span-7 {
   color: #545454;
   text-decoration: none;
   position: relative;
   cursor: pointer;
 }
 
-.change-format-result .span-7::after {
+.compress-result .span-7::after {
   content: "";
   position: absolute;
   left: 0;
@@ -186,4 +186,33 @@
   padding: 7px 2.9px 10px 0;
   width: 334px;
   box-sizing: border-box;
+}
+
+.navbar7 {
+  position: relative;
+}
+
+.todas-las-herramientas7 {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu span:hover {
+  background-color: #f5f5f5;
 }

@@ -250,8 +250,8 @@
   transition: transform 0.3s ease;
 }
 
-.remove-background-result .container-5-5:hover,
-.remove-background-result .container-4-5:hover,
+/* .remove-background-result .container-5-5:hover,
+.remove-background-result .container-4-5:hover, */
 .container-2-5-5:hover, .containerwao:hover{
   transform: scale(1.1);
 }
@@ -334,9 +334,9 @@
 }
 
 .remove-background-result .recortar:hover,
-.remove-background-result .aadir-fondo:hover,
-.remove-background-result .abrir-en-canva:hover,
-.remove-background-result .aadir-filtro:hover {
+/* .remove-background-result .aadir-filtro:hover, */
+/* .remove-background-result .aadir-fondo:hover, */
+.remove-background-result .abrir-en-canva:hover {
   color: #2c2c2c;
 }
 
@@ -547,4 +547,31 @@
   color: #333;
 }
 
+.navbar5 {
+  position: relative;
+}
 
+.todas-las-herramientas5 {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu span:hover {
+  background-color: #f5f5f5;
+}

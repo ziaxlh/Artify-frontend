@@ -6,6 +6,7 @@ const CompressComponent = () => {
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
   const [isDragOver, setIsDragOver] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleRemove = () => {
     navigate("/remove-background");
@@ -20,7 +21,7 @@ const CompressComponent = () => {
   };
 
   const handleTools = () => {
-    navigate("/remove-background");
+    navigate("/tools");
   };
 
   const handleStart = () => {
@@ -77,6 +78,14 @@ const CompressComponent = () => {
     }
   };
 
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  const closeDropdown = () => {
+    setDropdownVisible(false);
+  };
+
   return (
     <div className="compress">
       <nav className="navbar4">
@@ -113,10 +122,19 @@ const CompressComponent = () => {
               Comprimir
             </span>
           </div>
-          <div className="todas-las-herramientas3">
-            <span className="span-3" onClick={handleTools}>
-              Todas las herramientas
-            </span>
+          <div 
+            className="todas-las-herramientas3" 
+            onMouseEnter={toggleDropdown} 
+            onMouseLeave={closeDropdown}
+          >
+            <span>Todas las herramientas</span>
+            {dropdownVisible && (
+              <div className="dropdown-menu">
+                <span onClick={handleRemove}>Remover fondo</span>
+                <span onClick={handleChange}>Cambiar formato</span>
+                <span onClick={handleCompress}>Comprimir</span>
+              </div>
+            )}
           </div>
           <img className="polygon-3" src="polygon_11_x2m.png" />
         </div>

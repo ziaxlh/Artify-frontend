@@ -14,7 +14,8 @@
 .home .navbar {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background: #FFFFFF;
-  position: relative;
+  position: fixed;
+  z-index: 1000;
   margin-bottom: 199px;
   display: flex;
   flex-direction: row;
@@ -113,6 +114,7 @@
   display: flex;
   padding-right: 32px;
   width: 1578px;
+  margin-top: 260px;
   box-sizing: border-box;
 }
 
@@ -221,4 +223,33 @@
 .home .container-7:hover {
   background-color: #7acbf5; 
   box-shadow: 0 0 10px #7acbf5;
+}
+
+.navbar {
+  position: relative;
+}
+
+.todas-las-herramientas {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu span:hover {
+  background-color: #f5f5f5;
 }

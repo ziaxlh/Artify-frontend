@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,6 +8,9 @@ const ChangeFormat = () => {
   const [isDragOver, setIsDragOver] = useState(false);
   const [convertedFile, setConvertedFile] = useState(null);
   const [selectedFormat, setSelectedFormat] = useState('');
+  const downloadRef = useRef(null);
+  const toolsRef = useRef(null);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleRemove = () => {
     navigate('/remove-background');
@@ -22,7 +25,7 @@ const ChangeFormat = () => {
   };
 
   const handleTools = () => {
-    navigate('/remove-background');
+    navigate('/tools');
   };
 
   const handleStart = () => {
@@ -49,10 +52,18 @@ const ChangeFormat = () => {
     setIsDragOver(false);
     const file = event.dataTransfer.files[0];
     setSelectedFile(file);
+    scrollToDownload();
   };
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
+    scrollToDownload();
+  };
+
+  const scrollToDownload = () => {
+    if (downloadRef.current) {
+      downloadRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleConvert = async () => {
@@ -89,6 +100,20 @@ const ChangeFormat = () => {
     document.body.removeChild(link);
   };
 
+  const handleScrollToTools = () => {
+    if (toolsRef.current) {
+      toolsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  const closeDropdown = () => {
+    setDropdownVisible(false);
+  };
+
   return (
     <div className="change-format">
       <nav className="navbar3">
@@ -105,8 +130,19 @@ const ChangeFormat = () => {
           <div className="comprimir2">
             <span className="span-2" onClick={() => handleCompress("/compress")}>Comprimir</span>
           </div>
-          <div className="todas-las-herramientas2">
-            <span className="span-2" onClick={() => handleTools("#")}>Todas las herramientas</span>
+          <div 
+            className="todas-las-herramientas2" 
+            onMouseEnter={toggleDropdown} 
+            onMouseLeave={closeDropdown}
+          >
+            <span>Todas las herramientas</span>
+            {dropdownVisible && (
+              <div className="dropdown-menu">
+                <span onClick={handleRemove}>Remover fondo</span>
+                <span onClick={handleChange}>Cambiar formato</span>
+                <span onClick={handleCompress}>Comprimir</span>
+              </div>
+            )}
           </div>
           <img className="polygon-2" src="polygon_11_x2m.png" />
         </div>
@@ -140,30 +176,35 @@ const ChangeFormat = () => {
           o arrastra y suelta aquí
         </span>
       </div>
+      <div className="container-6-6-1">
+      {convertedFile && (
+          <div className="rectangle-9-6">
+          <img src={convertedFile} alt="converted" />
+          </div>
+      )}
       {selectedFile && (
-        <div>
-          <h2>Selected Image:</h2>
-          <p>{selectedFile.name}</p>
-          <h2>Select Format:</h2>
-          <select onChange={(e) => setSelectedFormat(e.target.value)}>
-            <option value="">Select format</option>
+        <div className="menu1">
+          <div className="imagen-seleccionada">Imagen seleccionada:</div>
+          <p className='name-image'>{selectedFile.name}</p>
+          <div className="cambiar-formato-a">Cambiar formato a:</div>
+          <br />
+          <select className="custom-select" onChange={(e) => setSelectedFormat(e.target.value)}>
+            <option value="">Selecciona un formato</option>
             <option value="png">PNG</option>
             <option value="jpg">JPG</option>
             <option value="gif">GIF</option>
             <option value="bmp">BMP</option>
           </select>
           <br />
-          <button onClick={handleConvert}>Convert</button>
+          <div className="container-convertir" onClick={handleConvert}>
+          <span className="convertir">Convertir imagen</span>
+          </div>
+          <div className="container-Descargar" ref={downloadRef} onClick={handleDownload}>
+          <span className="Descargar-6">Descargar</span>
+          </div>
         </div>
       )}
-      {convertedFile && (
-        <div>
-          <h2>Converted Image:</h2>
-          <img src={convertedFile} alt="converted" />
-          <br />
-          <button onClick={handleDownload}>Download</button>
-        </div>
-      )}
+      </div>
     </div>
   );
 }

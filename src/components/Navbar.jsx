@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const navigate = useNavigate();
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleRemove = () => {
     navigate("/remove-background");
@@ -17,13 +18,21 @@ const Nav = () => {
   };
 
   const handleTools = () => {
-    navigate("/remove-background");
+    navigate("/");
   };
 
   const handleStart = () => {
     navigate("/");
   };
 
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  const closeDropdown = () => {
+    setDropdownVisible(false);
+  };
+  
   return (
     <div className="remove-background">
     <nav className="navbar2">
@@ -51,16 +60,25 @@ const Nav = () => {
             Comprimir
           </span>
         </div>
-        <div className="todas-las-herramientas1">
-          <span className="span-1" onClick={() => navigate("/tools")}>
-            Todas las herramientas
-          </span>
-        </div>
+        <div 
+            className="todas-las-herramientas1" 
+            onMouseEnter={toggleDropdown} 
+            onMouseLeave={closeDropdown}
+          >
+            <span>Todas las herramientas</span>
+            {dropdownVisible && (
+              <div className="dropdown-menu">
+                <span onClick={handleRemove}>Remover fondo</span>
+                <span onClick={handleChange}>Cambiar formato</span>
+                <span onClick={handleCompress}>Comprimir</span>
+              </div>
+            )}
+          </div>
         <img className="polygon-1" src="polygon_11_x2m.png" alt="polygon" />
       </div>
       <img className="ellipse-1" src="ellipse_11_x2.png" alt="ellipse" />
     </nav>
-    </div>
+    </div>  
   );
 };
 

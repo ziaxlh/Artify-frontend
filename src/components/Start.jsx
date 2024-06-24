@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Start = () => {
   const navigate = useNavigate();
+  const toolsRef = useRef(null);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleRemove = () => {
     navigate('/remove-background');
@@ -17,36 +19,63 @@ const Start = () => {
   };
 
   const handleTools = () => {
-    navigate('/remove-background');
+    if (toolsRef.current) {
+      toolsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleStart = () => {
     navigate('/');
   };
 
+  const handleScrollToTools = () => {
+    if (toolsRef.current) {
+      toolsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  const closeDropdown = () => {
+    setDropdownVisible(false);
+  };
+
   return (
     <div className="home">
       <nav className="navbar">
-          <div className="container-2">
-            <div className="logo-artify-1">
+        <div className="container-2">
+          <div className="logo-artify-1">
             <img className="logo-artify-1" src="logoArtify.png" alt="Logo Artify" onClick={handleStart} />
-            </div>
-            <div className="remover-fondo">
-              <span onClick={() => handleRemove("/remove-background")}>Remover fondo</span>
-            </div>
-            <div className="cambiar-formato">
-              <span onClick={() => handleChange("/change-format")}>Cambiar formato</span>
-            </div>
-            <div className="comprimir">
-              <span onClick={() => handleCompress("/compress")}>Comprimir</span>
-            </div>
-            <div className="todas-las-herramientas">
-              <span onClick={() => handleTools("#")}>Todas las herramientas</span>
-              </div>
-            <img className="polygon" src="polygon_11_x2m.png" />
           </div>
-          <img className="ellipse" src="ellipse_11_x2.png" />
-        </nav>
+          <div className="remover-fondo">
+            <span onClick={handleRemove}>Remover fondo</span>
+          </div>
+          <div className="cambiar-formato">
+            <span onClick={handleChange}>Cambiar formato</span>
+          </div>
+          <div className="comprimir">
+            <span onClick={handleCompress}>Comprimir</span>
+          </div>
+          <div 
+            className="todas-las-herramientas" 
+            onMouseEnter={toggleDropdown} 
+            onMouseLeave={closeDropdown}
+          >
+            <span>Todas las herramientas</span>
+            {dropdownVisible && (
+              <div className="dropdown-menu">
+                <span onClick={handleRemove}>Remover fondo</span>
+                <span onClick={handleChange}>Cambiar formato</span>
+                <span onClick={handleCompress}>Comprimir</span>
+              </div>
+            )}
+          </div>
+          <img className="polygon" src="polygon_11_x2m.png" />
+        </div>
+        <img className="ellipse" src="ellipse_11_x2.png" />
+      </nav>
       <div className="start">
         <div className="container">
           <div className="container-1">
@@ -64,12 +93,61 @@ const Start = () => {
             
             <div className="container-6">
               <img className="figuras" src="Figuras.png"/>
-                <div className="container-7">
-                  <span className="empieza-ahora">
-                    Empieza ahora
-                  </span>
-                </div>
+              <div className="container-7" onClick={handleScrollToTools}>
+                <span className="empieza-ahora">
+                  Empieza ahora
+                </span>
+              </div>
             </div>   
+          </div>
+        </div>
+      </div>
+      <div className="tools" ref={toolsRef}>
+        <div className="options">
+          <div className="remove12">
+            <div className="remover-fondo-de-una-imagen">
+              Remover fondo de una imagen
+            </div>
+            <div className="elimina-fondos">
+              Elimina fondos de tus imágenes con precisión y facilidad, dejando el
+              sujeto principal en primer plano.
+            </div>
+            <div className="remover-f">
+              <img className="RemoverF" src="RemoverF.png" />
+            </div>
+            <div className="EmpezAr-1" onClick={handleRemove}>
+              <span className="empezar">Empezar</span>
+            </div>
+          </div>
+          <div className="change">
+            <div className="cambiar-formato-de-una-imagen">
+              Cambiar formato de una imagen
+            </div>
+            <div className="transforma-imgenes">
+              Transforma imágenes rápidamente a diversos formatos, adaptándolas a
+              las necesidades de tu proyecto.
+            </div>
+            <div className="cambiar-f">
+              <img className="CambiarF" src="CambiarF.png" />
+            </div>
+            <div className="EmpezAr-2" onClick={handleChange}>
+              <span className="empezar-2">Empezar</span>
+            </div>
+          </div>
+          <div className="compressS">
+            <div className="comprimir-el-peso-de-una-imagen">
+              Comprimir el peso de una imagen
+            </div>
+            <div className="optimiza-tamao">
+              Optimiza el tamaño de tus imágenes reduciendo su peso, reduciendo el
+              consumo de datos.
+            </div>
+            <div className="comprimir-f">
+              <img className="ComprimirF" src="Comprimir.png" />
+            </div>
+            <div className="EmpezAr-3" onClick={handleCompress}>
+              <span className="empezar-1">Empezar</span>
+            </div>
           </div>
         </div>
       </div>

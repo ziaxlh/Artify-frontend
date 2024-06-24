@@ -1,0 +1,109 @@
+.tools {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  column-gap: 55.3px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  margin-top: 70px;
+}
+
+.tools .options{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 55.3px;
+  }
+
+.tools .remove12, 
+.tools .compressS, 
+.tools .change   {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background: #ffffff;
+  position: relative;
+  margin-top: 211px;
+  display: flex;
+  flex-direction: column;
+  padding: 57.7px 50px 64.5px 51px;
+  width: 520px;
+  box-sizing: border-box;
+}
+
+.tools .remover-fondo-de-una-imagen, 
+.tools .comprimir-el-peso-de-una-imagen, 
+.tools .cambiar-formato-de-una-imagen {
+  margin-bottom: 20.3px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 600;
+  font-size: 39px;
+  color: #2c2c2c;
+}
+
+.tools .CambiarF, 
+.tools .RemoverF, 
+.tools .ComprimirF{
+  margin: 0 0 25px 130px;
+  width: 159px;
+  height: 157px;
+}
+
+.tools .empezar-1, 
+.tools .empezar-2, 
+.tools .empezar {
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 32px;
+  color: #00387a;
+  margin-left: 110px;
+}
+
+.tools .imagen-20240620063620312-no-bg-1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+}
+
+.tools .transforma-imgenes, 
+.tools .optimiza-tamao, 
+.tools .elimina-fondos {
+  margin-bottom: 24.7px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 26px;
+  color: #2c2c2c;
+}
+
+.tools .EmpezAr-1, 
+.tools .EmpezAr-3, 
+.tools .EmpezAr-2 {
+  border-radius: 13px;
+  background: #9de2f8;
+  position: relative;
+  margin-left: 0px;
+  /* display: flex; */
+  align-self: center;
+  padding: 8.1px 0 23.4px 0;
+  width: 353px;
+  box-sizing: border-box;
+  margin-right: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.tools .EmpezAr:hover, 
+.tools .EmpezAr-3:hover, 
+.tools .EmpezAr-2:hover {
+    background-color: #7acbf5;
+    box-shadow: 0 0 10px #7acbf5;
+}
