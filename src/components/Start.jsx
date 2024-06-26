@@ -47,7 +47,7 @@ const Start = () => {
       <nav className="navbar">
         <div className="container-2">
           <div className="logo-artify-1">
-            <img className="logo-artify-1" src="logoArtify.png" alt="Logo Artify" onClick={handleStart} />
+            <img className="logo-artify-1" src={`${process.env.PUBLIC_URL}/logoArtify.png`}  alt="Logo Artify" onClick={handleStart} />
           </div>
           <div className="remover-fondo">
             <span onClick={handleRemove}>Remover fondo</span>
@@ -72,7 +72,8 @@ const Start = () => {
               </div>
             )}
           </div>
-          <img className="polygon" src="polygon_11_x2m.png" />
+          <img className="polygon" onMouseEnter={toggleDropdown} 
+            onMouseLeave={closeDropdown} src="polygon_11_x2m.png" />
         </div>
         <img className="ellipse" src="ellipse_11_x2.png" />
       </nav>
@@ -92,7 +93,7 @@ const Start = () => {
             </div>
             
             <div className="container-6">
-              <img className="figuras" src="Figuras.png"/>
+            <img className="figuras" src={`${process.env.PUBLIC_URL}/Figuras.png`} alt="Logo Artify" />
               <div className="container-7" onClick={handleScrollToTools}>
                 <span className="empieza-ahora">
                   Empieza ahora
