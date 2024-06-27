@@ -9,6 +9,7 @@ import Login from '../pages/Login';
 import ChangeR from '../pages/ChangeR';
 import CompressR from '../pages/CompressR';
 import Tools from '../pages/Tools';
+import Account from '../pages/Account';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
             <Route path="/remove-result" element={<RemoveResult />} />
             <Route path="/change-result" element={<ChangeR />} />
             <Route path="/compress-result" element={<CompressR />} />
-            <Route path="/tools" element={<Tools />} />
+            <Route path="/account" element={<Account />} />
           </Routes>
         </header>
       </div>

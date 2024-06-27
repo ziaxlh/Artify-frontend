@@ -85,7 +85,7 @@ const ChangeResult = () => {
           </div>
           <img className="polygon-6" src="polygon_11_x2m.png" alt="Polygon" />
         </div>
-        <img className="ellipse-6" src="ellipse_11_x2.png" alt="Ellipse" />
+        {/* <img className="ellipse-6" src="ellipse_11_x2.png" alt="Ellipse" /> */}
       </nav>
       <div className="container-6-6-1">
         {showFormatSelection && selectedFile && (

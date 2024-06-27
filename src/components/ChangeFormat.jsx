@@ -146,7 +146,7 @@ const ChangeFormat = () => {
           </div>
           <img className="polygon-2" src="polygon_11_x2m.png" />
         </div>
-        <img className="ellipse-2" src="ellipse_11_x2.png" />
+        {/* <img className="ellipse-2" src="ellipse_11_x2.png" /> */}
       </nav>
       <div 
         className={`container-3-2 ${isDragOver ? 'drag-over' : ''}`}

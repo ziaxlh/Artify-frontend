@@ -75,7 +75,7 @@ const Start = () => {
           <img className="polygon" onMouseEnter={toggleDropdown} 
             onMouseLeave={closeDropdown} src="polygon_11_x2m.png" />
         </div>
-        <img className="ellipse" src="ellipse_11_x2.png" />
+        {/* <img className="ellipse" src={`${process.env.PUBLIC_URL}/ellipse_11_x2.png`}/> */}
       </nav>
       <div className="start">
         <div className="container">

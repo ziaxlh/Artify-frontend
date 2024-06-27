@@ -1,0 +1,131 @@
+.account-container {
+  display: flex;
+  padding: 20px;
+  margin-left: 180px;
+}
+
+.account-sidebar {
+  width: 250px;
+  height: 350px;
+  padding-right: 20px;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  margin-top: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.status {
+  color: #1d9ddd;
+  font-weight: bold;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
+.menuAc {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-link {
+  margin-bottom: 10px;
+  color: #2c2c2c;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.menu-link:hover {
+  transform: scale(1.1);
+}
+
+.firma-section,
+.facturacion-section {
+  margin-top: 20px;
+}
+
+.account-content {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.profile-info {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-item-1 {
+  flex-direction: column;
+}
+
+.cerrar-sesion,.email-section-link {
+  margin-top: 40px;
+}
+
+.profile-item,
+.social-links,
+.email-section {
+  width: 30%;
+  padding: 30px;
+  margin-right: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info-title {
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.profile-item-title {
+  margin-bottom: 30px;
+  color: #2c2c2c;
+}
+
+.social-links-title,
+.email-section-title {
+  margin-bottom: 10px;
+  margin-bottom: 30px;
+  color: #2c2c2c;
+}
+
+.profile-item-link,
+.social-links-link,
+.email-section-link,
+.cerrar-sesion {
+  margin-bottom: 30px;
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-item-link:hover,
+.social-links-link:hover,
+.email-section-link:hover,
+.cerrar-sesion:hover {
+  text-decoration: underline;
+}
+
+.flag {
+  font-size: 20px;
+}

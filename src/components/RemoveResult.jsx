@@ -230,7 +230,7 @@ const RemoveResult = () => {
           </div>
           <img className="polygon-5" src="polygon_11_x2m.png" alt="Polygon" />
         </div>
-        <img className="ellipse-5" src="ellipse_11_x2.png" alt="Ellipse" />
+        {/* <img className="ellipse-5" src="ellipse_11_x2.png" alt="Ellipse"/> */}
       </nav>
       <div className="container-6-5">
         <div className="rectangle-9-5" style={{ position: "relative" }}>
@@ -439,7 +439,7 @@ const RemoveResult = () => {
             <span className="close" onClick={handleCloseModal}>
               &times;
             </span>
-            <h2 className="h2-1">Esta opción estará disponible próximamente</h2>
+            <h2 className="h2-1">Esta opción de añadir<br/>fondo junto a la de añadir flitros<br/> estará disponible próximamente</h2>
           </div>
         </div>
       )}

@@ -106,7 +106,7 @@ const CompressResult = () => {
           </div>
           <img className="polygon-7" src="polygon_11_x2m.png" alt="Polygon" />
         </div>
-        <img className="ellipse-7" src="ellipse_11_x2.png" alt="Ellipse" />
+        {/* <img className="ellipse-7" src="ellipse_11_x2.png" alt="Ellipse" /> */}
       </nav>
       <div className="fin">
         <div className="la-imagen-se-acomprimido-con-exito">

@@ -76,7 +76,7 @@ const Nav = () => {
           </div>
         <img className="polygon-1" src="polygon_11_x2m.png" alt="polygon" />
       </div>
-      <img className="ellipse-1" src="ellipse_11_x2.png" alt="ellipse" />
+      {/* <img className="ellipse-1" src="ellipse_11_x2.png" /> */}
     </nav>
     </div>  
   );

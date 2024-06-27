@@ -138,7 +138,7 @@ const CompressComponent = () => {
           </div>
           <img className="polygon-3" src="polygon_11_x2m.png" />
         </div>
-        <img className="ellipse-3" src="ellipse_11_x2.png" />
+        {/* <img className="ellipse-3" src="ellipse_11_x2.png" /> */}
       </nav>
       <div
         className={`container-3-3 ${isDragOver ? "drag-over" : ""}`}
